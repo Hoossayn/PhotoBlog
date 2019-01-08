@@ -2,51 +2,76 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/new_post_desc"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MakePost">
+    tools:context=".NewPostActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/new_post_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </android.support.v7.widget.Toolbar>
 
     <ImageView
-        android:id="@+id/postImage"
+        android:id="@+id/new_post_image"
         android:layout_width="0dp"
-        android:layout_height="305dp"
-        android:layout_marginBottom="32dp"
-        android:layout_marginTop="8dp"
-        android:scaleType="centerCrop"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/describePost"
+        android:layout_height="270dp"
+        android:contentDescription="@string/im_dsc_new_poste"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="@+id/new_post_progress"
+        app:srcCompat="@drawable/add_post" />
 
     <EditText
-        android:id="@+id/describePost"
+        android:id="@+id/new_postedit_desc"
         android:layout_width="0dp"
-        android:layout_height="91dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:ems="10"
-        android:hint="Description"
+        android:hint="@string/new_post_dsc_hint"
+        android:importantForAutofill="no"
         android:inputType="textMultiLine"
-        android:singleLine="false"
-        app:layout_constraintBottom_toTopOf="@+id/post"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/postImage" />
+        app:layout_constraintTop_toBottomOf="@+id/new_post_image"
+        tools:targetApi="o" />
 
-    <Button
-        android:id="@+id/post"
+    <ProgressBar
+        android:id="@+id/new_post_progress"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="#f2588b"
-        android:text="Post"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
+        android:layout_height="11dp"
+        android:indeterminate="true"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/describePost" />
+        app:layout_constraintTop_toBottomOf="@+id/new_post_toolbar" />
+
+    <Button
+        android:id="@+id/post_val_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/colorAccent"
+        android:text="@string/add_new_post_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_postedit_desc" />
+
 </android.support.constraint.ConstraintLayout>

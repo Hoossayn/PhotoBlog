@@ -3,15 +3,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/bottom_nav_home"
+        android:id="@+id/item_home"
         android:icon="@drawable/home_button_24dp"
-        android:title="@string/bottom_home" />
+        android:title="@string/btm_home" />
     <item
-        android:id="@+id/bottom_nav_notification"
+        android:id="@+id/item_notif"
         android:icon="@drawable/notifications_black_vector_24dp"
-        android:title="@string/bottom_notification" />
+        android:title="@string/btm_notify" />
     <item
-        android:id="@+id/bottom_nave_account"
+        android:id="@+id/item_account"
         android:icon="@drawable/person_black_24dp"
-        android:title="@string/bottom_account" />
+        android:title="@string/btm_account" />
 </menu>

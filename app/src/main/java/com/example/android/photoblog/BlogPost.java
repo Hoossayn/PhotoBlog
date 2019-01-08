@@ -1,29 +1,21 @@
 package com.example.android.photoblog;
+import com.google.firebase.firestore.ServerTimestamp;
 
-
-import java.sql.Timestamp;
 import java.util.Date;
 
-public class BlogPost {
+public class BlogPost extends BlogPostId {
 
-    public String image_url, user_id, desc;
-    public Date timeStamp;
+    public String user_id, image_url, desc, image_thumb;
+    public Date timestamp;
 
-    public BlogPost(){}
+    public BlogPost() {}
 
-    public BlogPost(String image_url, String user_id, String desc,Date timeStamp) {
-        this.image_url = image_url;
+    public BlogPost(String user_id, String image_url, String desc, String image_thumb, Date timestamp) {
         this.user_id = user_id;
-        this.desc = desc;
-        this.timeStamp = timeStamp;
-    }
-
-    public String getImage_url() {
-        return image_url;
-    }
-
-    public void setImage_url(String image_url) {
         this.image_url = image_url;
+        this.desc = desc;
+        this.image_thumb = image_thumb;
+        this.timestamp = timestamp;
     }
 
     public String getUser_id() {
@@ -34,6 +26,14 @@ public class BlogPost {
         this.user_id = user_id;
     }
 
+    public String getImage_url() {
+        return image_url;
+    }
+
+    public void setImage_url(String image_url) {
+        this.image_url = image_url;
+    }
+
     public String getDesc() {
         return desc;
     }
@@ -42,11 +42,30 @@ public class BlogPost {
         this.desc = desc;
     }
 
-    public Date getTimeStamp() {
-        return timeStamp;
+    public String getImage_thumb() {
+        return image_thumb;
     }
 
-    public void setTimeStamp(Date timeStamp) {
-        this.timeStamp = timeStamp;
+    public void setImage_thumb(String image_thumb) {
+        this.image_thumb = image_thumb;
+    }
+
+    public Date getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Date timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    @Override
+    public String toString() {
+        return "BlogPost{" +
+                "user_id='" + user_id + '\'' +
+                ", image_url='" + image_url + '\'' +
+                ", desc='" + desc + '\'' +
+                ", image_thumb='" + image_thumb + '\'' +
+                ", timestamp=" + timestamp +
+                '}';
     }
 }

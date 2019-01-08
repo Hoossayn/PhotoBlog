@@ -3,14 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/action_search"
+        android:id="@+id/action_search_btn"
         android:icon="@mipmap/search"
-        android:title="@string/action_search"
+        android:title="@string/action_search_text"
         app:showAsAction="always" />
     <item
-        android:id="@+id/action-setting"
-        android:title="@string/account_settings" />
+        android:id="@+id/action_set_btn"
+        android:title="@string/action_setting" />
     <item
-        android:id="@+id/action_logout"
-        android:title="@string/account_logout" />
+        android:id="@+id/action_logout_btn"
+        android:title="@string/action_logout" />
 </menu>

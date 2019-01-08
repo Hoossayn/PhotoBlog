@@ -3,4 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#763148</color>
+
+    <color name="redcolor">#ff1a0a</color>
+    <color name="like_btn_gray">#747474</color>
+    <color name="like_btn_accent">#F44336</color>
+
+    <drawable name="whitecolor">#FFFFFF</drawable>
 </resources>
